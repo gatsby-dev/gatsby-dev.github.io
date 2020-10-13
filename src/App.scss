@@ -1,0 +1,91 @@
+@import "./assets/sass/vars";
+
+@mixin title($headElement: h1) {
+	@if $headElement == h3 {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+	} @else if $headElement == h5 {
+		font-size: 1rem;
+	} @else if $headElement == h6 {
+		font-size: 0.875rem;
+	} @else {
+		font-size: 2rem;
+		margin-bottom: 1.3rem;
+		text-transform: capitalize;
+	}
+}
+
+.gutter-top {
+	padding-top: 14.375rem;
+	@media only screen and (max-width: $xs) {
+		padding-top: 10.125rem;
+	}
+}
+
+.box {
+	background-color: $white;
+	border-radius: 20px;
+	box-shadow: 0 20px 40px rgba(103, 118, 128, 0.03);
+	padding: 1.675rem;
+	position: relative;
+	@media only screen and (max-width: $xs) {
+		padding: 0.825rem 1rem;
+	}
+
+	&__border {
+		border: 2px solid #ebf0f2;
+		margin: 1rem 0;
+		@media only screen and (max-width: $xs) {
+			border-radius: 13.3333333333px;
+			padding: 1rem;
+		}
+	}
+
+	&__flex {
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+		justify-content: center;
+	}
+}
+
+.title {
+	&--h1 {
+		@include title();
+	}
+	&__separate {
+		margin-bottom: 2.3125rem;
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			background-color: $blue;
+			border-radius: 0.5rem;
+			height: 5px;
+			position: absolute;
+			bottom: -18px;
+			left: 0;
+			width: 3.125rem;
+			z-index: 1;
+		}
+		&::after {
+			background-color: $orange;
+			width: 1rem;
+		}
+	}
+	&--h3 {
+		@include title(h3);
+	}
+	&--h5 {
+		@include title(h5);
+	}
+	&--h6 {
+		@include title(h6);
+	}
+}
+
+svg {
+	margin-right: 0.5rem;
+}

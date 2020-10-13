@@ -1,0 +1,66 @@
+@import "../../assets/sass/vars";
+
+.form-group {
+	position: relative;
+
+	.form-control {
+		background-color: #f7f9fa;
+		border: 2px solid #f7f9fa;
+		border-radius: 1.25rem;
+		box-shadow: none;
+		color: $lightGrey;
+		font-size: inherit;
+		height: auto;
+		padding: 0.875rem 1.375rem 0.8125rem;
+		position: relative;
+		width: 100%;
+		resize: none;
+	}
+
+	svg {
+		visibility: hidden;
+		position: absolute;
+		width: 1.025rem;
+		height: auto;
+		top: 30%;
+		right: 10px;
+		transform: translate(-10%, -35%);
+	}
+
+	.errorMessage {
+		visibility: hidden;
+		font-size: 12px;
+	}
+
+	&.success {
+		.form-control {
+			border-color: $green;
+		}
+		.check-circle {
+			color: $green;
+			visibility: visible;
+		}
+	}
+
+	&.error {
+		.form-control {
+			border-color: $red;
+		}
+		.exclamation-circle {
+			color: $red;
+			visibility: visible;
+		}
+		.errorMessage {
+			@extend .exclamation-circle;
+		}
+	}
+}
+
+.btn[type="submit"] {
+	border-radius: 1.25rem;
+	padding: 0.7rem 1rem;
+	&:hover {
+		background-color: linear-gradient(142.17deg, #3086ff 6.66%, $blue 91.48%);
+		outline: none;
+	}
+}

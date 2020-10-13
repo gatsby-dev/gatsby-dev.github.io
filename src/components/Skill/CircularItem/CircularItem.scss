@@ -1,0 +1,61 @@
+@import "../../../assets/sass/vars";
+
+@mixin rotate-hide {
+	transform: translate(-50%, -50%) rotateY(180deg);
+	opacity: 0;
+}
+
+@mixin rotate-show {
+	transform: translate(-50%, -50%) rotateY(0);
+	opacity: 1;
+}
+
+.circular-skill {
+	width: calc(18% - 1rem);
+	margin: 0.75rem;
+	text-decoration: none !important;
+
+	@media only screen and (max-width: $xs) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0.75rem 1.1rem;
+	}
+
+	.icon {
+		position: relative;
+		img,
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transition: opacity 0.4s, transform 0.5s;
+		}
+
+		img {
+			width: 45%;
+			height: auto;
+			@include rotate-show;
+		}
+
+		span {
+			font-size: 2.5rem;
+			@include rotate-hide;
+		}
+	}
+
+	span {
+		color: $darkGrey;
+		font-weight: bold;
+	}
+
+	&:hover > .icon {
+		img {
+			@include rotate-hide;
+		}
+
+		span {
+			@include rotate-show;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.gallery-grid {
+	padding: 0 0.275rem;
+	&__item {
+		padding: 1rem;
+		&:hover {
+			box-shadow: 0 2px 10px 5px rgba(190, 190, 190, 0.41);
+			transition: all 0.4s ease-in-out;
+			border-radius: 0.5rem;
+		}
+	}
+	&__image-wrap {
+		border-radius: 14px;
+		height: 11.25rem;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+	}
+	&__image {
+		object-fit: cover;
+		object-position: center;
+		height: 100%;
+		width: 100%;
+		transform: scale3d(1, 1, 1);
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		svg {
+			margin-right: 0.5rem;
+		}
+	}
+}

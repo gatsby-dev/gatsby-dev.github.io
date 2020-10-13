@@ -1,0 +1,154 @@
+@import "../../assets/sass/vars";
+
+.header-image {
+	background: {
+		image: url(../../assets/images/header-image.jpg);
+		repeat: no-repeat;
+		size: cover;
+		position: center;
+	}
+	position: absolute;
+	width: 100%;
+	height: 19.5rem;
+}
+
+.header {
+	display: flex;
+	line-height: 1.5;
+	margin-bottom: 1.875rem;
+	@media only screen and (max-width: $sm) {
+		flex-direction: column;
+	}
+
+	svg {
+		margin-right: 0.5rem;
+	}
+
+	&__left {
+		display: flex;
+		align-items: flex-start;
+		flex: 0 0 50%;
+		position: relative;
+		padding-right: 1.875rem;
+		&::before {
+			content: "";
+			background-color: #ebf0f2;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			width: 1px;
+		}
+		@media only screen and (max-width: $sm) {
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+			padding-right: 0;
+			padding-bottom: 1.25rem;
+
+			&::before {
+				top: auto;
+				height: 1px;
+				width: 100%;
+			}
+		}
+
+		.#{$header}__base-info {
+			margin-left: 1.5rem;
+			@media only screen and (max-width: $sm) {
+				margin-left: 0;
+			}
+
+			.status {
+				font-size: 1.2rem;
+				display: inline-flex;
+				align-items: center;
+			}
+		}
+
+		.#{$header}__social {
+			margin-top: 0.5rem;
+			padding-left: 0;
+
+			li {
+				margin-top: 0.3rem;
+				a {
+					color: $lightGrey;
+					text-decoration: none;
+					span {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: flex-start;
+		flex: 0 0 50%;
+		padding-right: 1.875rem;
+		@media only screen and (max-width: $md) {
+			padding: {
+				top: 0.825rem;
+				left: 0;
+				right: 0;
+			}
+		}
+		@media only screen and (max-width: $xs) {
+			flex-direction: column;
+		}
+
+		.#{$header}__contact {
+			width: 50%;
+			@media only screen and (max-width: $md) {
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+				width: 100%;
+			}
+			@media only screen and (max-width: $xs) {
+				&:first-child {
+					li:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			li {
+				margin: 0.5rem 0;
+				@media only screen and (max-width: $xs) {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+				}
+
+				&:first-child {
+					margin-bottom: 1.7rem;
+					@media only screen and (max-width: $xs) {
+						margin-bottom: 0.5rem;
+					}
+				}
+
+				.overhead {
+					color: rgba(94, 110, 128, 0.8);
+					font-size: 0.8rem;
+					display: flex;
+					align-items: center;
+					text-transform: uppercase;
+					@media only screen and (max-width: $xs) {
+						margin-right: 0.25rem;
+					}
+				}
+
+				a {
+					color: $lightGrey;
+					text-decoration: none;
+					@media only screen and (max-width: $xs) {
+						padding-bottom: 0.25rem;
+					}
+				}
+			}
+		}
+	}
+}

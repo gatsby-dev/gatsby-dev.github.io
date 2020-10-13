@@ -1,0 +1,103 @@
+{
+	"information": {
+		"avatar": "../../assets/images/avatar.jpg",
+		"fullName": "Phan Van Minh Tai",
+		"apply": "< Front-end Developer />",
+		"dateOfBirth": "03 May, 1998",
+		"location": "Ho Chi Minh city, Viet Nam",
+		"gmail": "minhtai.pv3598@gmail.com",
+		"phoneNumber": "0332668145",
+		"github": "gatsby-dev",
+		"linkedin": "tai-minh-99b784199"
+	},
+	"about": {
+		"introduction": "I'm a senior at Ho Chi Minh City Open University. I'm looking for a job to gain more experience in my major when working in the company and also desire to complete my course at the university.",
+		"education": [
+			{
+				"place": "Ho Chi Minh city Open University",
+				"timeline": "2016 - Present",
+				"description": "I'm a senior student at present."
+			},
+			{
+				"place": "Tran Phu High School, Ho Chi Minh city",
+				"timeline": "2013 - 2016",
+				"description": "Graduated"
+			}
+		]
+	},
+	"resume": {
+		"experience": [
+			{
+				"place": "Boolfly Company",
+				"timeline": "06/2020 - 08/2020",
+				"description": "Front-end Developer Intern"
+			},
+			{
+				"place": "CrimsonWorks Company",
+				"timeline": "07/2019 - 10/2019",
+				"description": "Front-end Developer Intern"
+			}
+		],
+		"skills": [
+			{
+				"name": "HTML",
+				"value": 80,
+				"url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+				"color": "#e34f26"
+			},
+			{
+				"name": "CSS",
+				"value": 70,
+				"url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+				"color": "#0170ba"
+			},
+			{
+				"name": "JavaScript",
+				"value": 70,
+				"url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+				"color": "#ffc107"
+			},
+			{
+				"name": "Sass",
+				"value": 60,
+				"url": "https://sass-lang.com/",
+				"color": "#cd6799"
+			},
+			{
+				"name": "jQuery",
+				"value": 80,
+				"url": "https://jquery.com/",
+				"color": "#0868ac"
+			},
+			{
+				"name": "Bootstrap",
+				"value": 80,
+				"url": "https://getbootstrap.com/",
+				"color": "#563d7c"
+			},
+			{
+				"name": "ReactJS",
+				"value": 50,
+				"url": "https://reactjs.org/",
+				"color": "#00bcd4"
+			},
+			{
+				"name": "Java",
+				"value": 40,
+				"url": "https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html",
+				"color": "#5382a1"
+			}
+		]
+	},
+	"projects": [
+		{
+			"id": "data-table",
+			"name": "Data Table",
+			"linkProject": "https://gatsby-dev.github.io/data-table-reactjs",
+			"linkGithub": "https://github.com/gatsby-dev/data-table-reactjs"
+		}
+	],
+	"contact": {
+		"headline": "Contact"
+	}
+}
