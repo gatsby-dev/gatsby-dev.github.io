@@ -1,7 +1,7 @@
 import "./App.scss";
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./layouts/Header/Header";
 import SideNav from "./layouts/SideNav/SideNav";
 import Footer from "./layouts/Footer/Footer";
